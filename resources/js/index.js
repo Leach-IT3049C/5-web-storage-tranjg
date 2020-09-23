@@ -12,6 +12,20 @@ const liMaker = (text) => {
     const li = document.createElement(`li`);
     li.textContent = text;
     getList.appendChild(li);
+
+    let span = document.createElement("SPAN");
+    let txt = document.createTextNode("\u00D7");
+
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i=0; i < close.length; i++) {
+        close[i].onclick=function () {
+            let div = this.parentElement;
+            div.style.display = `none`;
+        }
+    }
 }
 
 getForm.addEventListener(`submit`, function (e) {
@@ -21,6 +35,7 @@ getForm.addEventListener(`submit`, function (e) {
     localStorage.setItem(`item`, JSON.stringify(itemsArray));
     liMaker(getItems.value);
     getItems.value="";
+
 });
 
 addBtn.addEventListener(`click`, function () {
@@ -31,3 +46,16 @@ addBtn.addEventListener(`click`, function () {
     getItems.value="";
 });
 
+data.forEach(item => {
+    liMaker(getItems);
+});
+
+const myNodelist = document.getElementsByTagName(`LI`);
+let i;
+for (i = 0; i < myNodelist.length; i++) {
+    const span = document.createElement(`SPAN`);
+    const txt = document.createTextNode(`\u00d7`);
+    span.className = `close;`
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+}
