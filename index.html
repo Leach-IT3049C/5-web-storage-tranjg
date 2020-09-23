@@ -13,14 +13,14 @@
 </head>
 <body>
     <header>
-        <form>
+        <form id="form">
         <div class="jumbotron">
             <div class="container">
             <h1 class="display-4">To-do List</h1>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Things to do...">
+                <input id="items" type="text" class="form-control" placeholder="Things to do...">
             </div>
-            <button class="btn btn-primary" type="button">Add</button>
+            <button id="add" class="btn btn-primary" type="button">Add</button>
             </div>
         </div>
         </form>
@@ -29,6 +29,8 @@
     <div id="list" class="container">
         <ul></ul>
     </div>
+
+    <script src="resources/js/index.js"></script>
 
 </body>
 </html>
