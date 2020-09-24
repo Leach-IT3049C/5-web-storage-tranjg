@@ -17,7 +17,7 @@ The web storage is stored locally on the user's computer.
 * What are application use cases?
 The user will be able to make themselves a to-do list, inputting each thing to do individually by pressing enter or the submit button, and then to clear all of it, the clear all button.
 ## Technical Write-up of selection of web storage solution:
-Choosing to store data locally is what seemed logical for this kinda of application, I want users to create their list but also be able to come back to them without the list disappearing.
+Choosing to store data locally is what seemed logical for this kinda of application, I want users to create their list but also be able to come back to them without the list disappearing compared to session storage where data is stored within the tab, but doesn't save the data when the tab is closed. 
 ## Self Reflection(s):
 I wanted to get fancy with this application where I could clear individual things on the list, but it was just really difficult, but the main part of coding this application wasn't bad and rather satisfying.
 ## How long it took me/us to finish this:
